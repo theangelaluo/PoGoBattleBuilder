@@ -2,6 +2,12 @@
   text-align: center;
 }
 
+.App-Teams-Page {
+  text-align: center;
+  display: inline-flex;
+  min-width: 100%;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -19,20 +25,88 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  /* justify-content: center; */
   font-size: calc(10px + 2vmin);
   color: white;
+  padding: 50px;
 }
+
+.App-header-1-Teams-Page {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+  font-size: calc(10px + 2vmin);
+  color: white;
+  padding-left: 50px;
+  padding-right: 50px;
+  border-right: 3px solid white;
+  width: 50%;
+  padding-bottom: 40px;
+}
+
+.App-header-2-Teams-Page {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+  font-size: calc(10px + 2vmin);
+  color: white;
+  padding-right: 50px;
+  padding-left: 50px;
+  width: 50%;
+  padding-bottom: 40px;
+}
+
 
 .App-link {
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.PokemonGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.Pokemon-image {
+  /* max-height:70px; */
+  width: auto;
+  height: 70px;
+}
+
+.Pokemon-card {
+  border-style: solid;
+  border-color: green;
+  border-radius: 3;
+}
+
+
+.flip-card {
+  transition: 150ms;
+  transform: perspective(1000px) rotateY(var(--rotate-y, 0)) translateY(var(--translate-y, 0));
+  transform-style: preserve-3d;
+  /* transition: transform 0.5s; */
+
+}
+
+
+.flip-card.flipped {
+  /* transform: rotateY(180deg); */
+  --rotate-y: 180deg;
+}
+
+.flip-card-inner {
+  transform-style: preserve-3d;
+}
+
+.flip-card-front {
+  backface-visibility: hidden;
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
 }
